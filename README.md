@@ -1,1 +1,5 @@
-# LetPhil Homework and Project Submissions
+# LetPhil 
+
+## Content
+- Homework
+- Projects
