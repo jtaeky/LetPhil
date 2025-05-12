@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+body {
+    background-color: rgb(21, 21, 100);
+    text-align: center;
+    height: 200vh;
+}
+
+header {
+    padding-top: 30px;
+}
+
+h1 {
+    color: pink;
+}
+
+h3 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+section {
+    color: hotpink;
+    line-height: 30px;
+}
+
+.space {
+    margin-bottom: 30px;
+}
+
+button {
+    margin-top: 10px;
+    height: 40px;
+    width: 360px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    background-color: rgb(35, 35, 227);
+    color: pink;
+    border-radius: 5px;
+    border: none;
+    transition: background-color .5s, color .5s;
+}
+
+button:hover {
+    background-color: pink;
+    color: navy;
+}
+
+
+.snowflakes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    /* lets you click through it */
+    z-index: 1000;
+}
+
+.snowflake {
+    color: white;
+    font-size: 1.5rem;
+    position: absolute;
+    top: -10%;
+    animation-name: fall;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    opacity: 0.8;
+}
+
+/* Random horizontal positions and animation delays */
+.snowflake:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.snowflake:nth-child(2) {
+    left: 30%;
+    animation-delay: 2s;
+    font-size: 2rem;
+}
+
+.snowflake:nth-child(3) {
+    left: 50%;
+    animation-delay: 4s;
+    font-size: 1rem;
+}
+
+.snowflake:nth-child(4) {
+    left: 70%;
+    animation-delay: 1s;
+    font-size: 1.8rem;
+}
+
+.snowflake:nth-child(5) {
+    left: 90%;
+    animation-delay: 3s;
+    font-size: 1.2rem;
+}
+
+@keyframes fall {
+    0% {
+        top: -10%;
+        transform: rotate(0deg);
+    }
+
+    100% {
+        top: 110%;
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Style body
+/* Warm #fff5e6 background */
+/* Set font-family */
+/* Set text-align */
+/* Set padding */
+/* Set color  #444 */
+
+/* Main heading  h1*/
+/* set color #d35400 */
+
+/* Paragraph */
+
+/* Set font-size */
+/* Set margin top and thickness  */
+
+/* Style Image */
+
+/* Set width */
+/* Set border-radius */
+/* Set margin-top */
+
+/* Button */
+
+/* Set padding: 10px 20px;
+  Set background-color  #e67e22
+  Set color white
+  Set border
+  Set border-radius
+  Set cursor */
+/* 
+  style button:hover */

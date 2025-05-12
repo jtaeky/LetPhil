@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>if Statement</title>
+    <style></style>
+</head>
+
+<body>
+
+    <script>
+        // ================ IF STATEMENTS ================
+
+        // Task 1: Write a program that takes a number and prints whether it is even or odd.
+
+        // let num = +prompt("Enter Number", "");
+        // (num % 2 == 0) ? alert("Even") : alert("Odd");
+
+        // Task 2: Ask the user for their age and:
+        // Print "Child" if age is less than 13.
+        // Print "Teen" if age is between 13 and 19.
+        // Print "Adult" if age is 20 or more.
+
+        // let age = +prompt("Enter Age", "");
+        // if (age < 0) {
+        //     alert("Age cannot be Negative");
+        // } else if (age < 13) {
+        //     alert("Child");
+        // } else if (age >= 13 && age <= 19) {
+        //     alert("Teen");
+        // } else {
+        //     alert("Adult");
+        // };
+
+        // Task 3: Check if a password meets these requirements:
+        // Must be at least 8 characters long.
+        // Must contain the letter "@".
+        // Print "Valid password" if both are true, otherwise "Invalid password".
+
+        // let pwd = prompt("Password", "");
+        // if (pwd.length < 7 || !pwd.includes("@")) {
+        //     alert("Invalid Password");
+        // } else {
+        //     alert("Valid Password");
+        // };
+
+        // Task 4: Given three numbers, print the largest one using if statements (no Math.max()).
+
+        // let numOne = +prompt("First Number", "");
+        // let numTwo = +prompt("Second Number", "");
+        // let numThree = +prompt("Third Number", "");
+        // let greatest;
+
+
+        // if (numOne >= numTwo && numOne >= numThree) {
+        //     greatest = numOne;
+        // } else if (numTwo >= numOne && numTwo >= numThree) {
+        //     greatest = numTwo;
+        // } else {
+        //     greatest = numThree;
+        // }
+        // let results = [];
+
+        // if (numOne === greatest) results.push(numOne);
+        // if (numTwo === greatest) results.push(numTwo);
+        // if (numThree === greatest) results.push(numThree);
+
+        // let finTxt = "";
+
+        // for (let i = 0; i < results.length; i++) {
+        //     finTxt = finTxt + `Num ${i + 1}: ${results[i]}\n`
+        // };
+
+        // alert(finTxt);
+
+        // Task 5: Convert a numeric score into a letter grade using this scale:
+        // 90+ = A  80–89 = B   70–79 = C   60–69 = D   below 60 = F
+
+        let grade = +prompt("Number Grade", "");
+
+        if (typeof grade !== "number") alert("Please input a number");
+        if (grade < 0 || grade > 100) alert("Please enter a value between 1 and 100");
+
+        if (grade >= 90 && grade <= 100) {
+            alert("A");
+        } else if (grade < 90 && grade >= 80) {
+            alert("B");
+        } else if (grade < 80 && grade >= 70) {
+            alert("C");
+        } else if (grade < 70 && grade >= 60) {
+            alert("D");
+        } else if (grade >= 0 && grade < 60) {
+            alert("F");
+        };
+
+    </script>
+
+</body>
+
+</html>

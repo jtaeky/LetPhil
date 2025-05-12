@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loops</title>
+    <style></style>
+</head>
+
+<body>
+
+    <script>
+        // ========= for Loop =========
+
+        // 1. Print numbers 1 to 50
+        // Write a for loop that prints every number from 1 to 50 in the console.
+
+        // for (let i = 1; i <= 50; i++) {
+        //     console.log(i);
+        // };
+
+        // 2. Count down from 10 to 1
+        // Use a for loop to count down from 10 to 1 and print each number.
+
+        // for (let i = 10; i >= 1; i--) {
+        //     console.log(i);
+        // };
+
+        // 3. Print only odd numbers from 1 to 20
+        // Use a for loop and an if statement inside it to print only the odd numbers between 1 and 20.
+
+        // for (let i = 1; i <= 20; i++) {
+        //     if (i % 2 !== 0) console.log(i);
+        // };
+
+        // 4. Find the sum of even numbers from 1 to 100
+        // Write a loop that adds up all the even numbers from 1 to 100 and prints the final total.
+
+        // let sum = 0;
+
+        // for (let i = 1; i <= 100; i++) {
+        //     if (i % 2 === 0) sum += i;
+        // };
+
+        // console.log(sum);
+
+        // 5. Count how many vowels are in a word
+        // Write a for loop that goes through a string and counts how many vowels (a, e, i, o, u) it has.
+
+        // let word = prompt("type in a word", "");
+        // let vowelCount = 0;
+
+        // for (let i = 0; i < word.length; i++) {
+        //     if (
+        //         word[i].toLowerCase() === "a" ||
+        //         word[i].toLowerCase() === "e" ||
+        //         word[i].toLowerCase() === "i" ||
+        //         word[i].toLowerCase() === "o" ||
+        //         word[i].toLowerCase() === "u"
+        //     ) vowelCount += 1;
+        //     console.log(vowelCount)
+        // };
+
+        // alert(`${vowelCount} vowels`);
+
+        // 6. Reverse an array without using .reverse()
+
+        // let fruits = ["apple", "banana", "kiwi", "dragonfruit", "durian"]
+        // let newfruits = []
+
+        // for (let i = 0; i < fruits.length; i++) {
+        //     newfruits[i] = fruits[fruits.length - 1 - i];
+        // }
+
+        // alert(newfruits);
+
+        // ========= while Loop =========
+
+        // 1. Print numbers from 1 to 10
+        // Write a while loop that prints the numbers from 1 to 10.
+
+        // let count = 1
+
+        // while (count <= 10) {
+        //     console.log(count);
+        //     count++;
+        // }
+
+        // 2. Sum of numbers from 1 to 100
+        // Use a while loop to calculate the sum of all numbers from 1 to 100.
+
+        // let count = 1;
+        // let total = 0;
+
+        // while (count <= 100) {
+        //     total += count;
+        //     count++;
+        //     console.log(total);
+        // };
+
+        // alert(total);
+
+        // 3. Print even numbers from 2 to 20
+        // Write a while loop to print all even numbers from 2 to 20.
+
+        // let count = 2;
+
+        // while (count <= 20) {
+        //     if (count % 2 === 0) console.log(count);
+        //     count++;
+        // }
+
+        // 4. Ask for a password until it's correct
+        // Write a while loop that keeps asking the user for a password until they enter the correct one (e.g., "secret"). After the correct password is entered, display a success message.
+
+        // let pwd = prompt("Password", "");
+
+        // while (pwd !== "secret") {
+        //     alert("Incorrect");
+        //     pwd = prompt("Password", "");
+        // }
+        // alert("Success!");
+
+        // 5. Find the factorial of a number
+        // Write a while loop that calculates the factorial of a given number. (Factorial of a number n is n * (n-1) * (n-2) * ... * 1)
+
+        // function factorialApp() {
+        //     let originalNum = prompt("Input Number");
+
+        //     while (originalNum !== null) {
+        //         while (isNaN(originalNum) || originalNum.trim() === "") {
+        //             originalNum = prompt("Please Input a Valid Number");
+        //             if (originalNum === null) {
+        //                 location.reload();
+        //                 return;
+        //             };
+        //         };
+
+        //         let numberNum = +originalNum;
+        //         let reduceNum = 1;
+        //         let factNum = numberNum;
+
+        //         while (reduceNum < numberNum) {
+        //             factNum *= numberNum - reduceNum;
+        //             reduceNum++;
+        //         };
+
+        //         alert(`Factorial of ${originalNum} = ${factNum}`);
+        //         originalNum = prompt("Input Number");
+        //     };
+        // };
+        // factorialApp();
+        // alert("Cancelled");
+        // location.reload();
+
+        // ========= do while Loops =========
+
+        // 1. Keep Asking for a Password Until It's Correct
+        // Goal: Prompt the user until they type "opensesame".
+
+        // let pwd;
+        // do {
+        //     pwd = prompt("Type in Password", "");
+        // } while (pwd !== "opensesame");
+        // alert("Correct")
+
+        // 2. Sum Positive Numbers Until Zero Is Entered
+        // Goal: Keep asking the user for numbers and add them up until they enter 0. Then show the total.
+
+        // let inputVal;
+        // let sumVal = 0;
+        // do {
+        //     inputVal = +prompt("Enter a Number", "");
+        //     sumVal += inputVal;
+        // } while (inputVal !== 0);
+        // alert(`Total: ${sumVal}`);
+
+        // 3. Count Number of Vowels in a Word
+        // Goal: Ask the user for a word, then count how many vowels are in it using a do...while loop.
+
+        // let word = prompt("Type in a word");
+        // let i = 0;
+        // let count = 0;
+        // do {
+        //     if (word[i].toLowerCase === "a" ||
+        //         word[i].toLowerCase === "e" ||
+        //         word[i].toLowerCase === "i" ||
+        //         word[i].toLowerCase === "o" ||
+        //         word[i].toLowerCase === "u") count += 1;
+        //     i++;
+        // } while (i < word.length);
+        // alert(`Vowel Count: ${count}`);
+
+        // 4. Guess the Random Number
+        // Goal: Generate a random number from 1–10 and have the user guess it until they get it right.
+
+        // let randNum = Math.floor(Math.random() * 10) + 1;
+        // let guess;
+        // do {
+        //     guess = +prompt("Guess the Number 1-10");
+        // } while (guess !== randNum);
+        // alert("You Got It!");
+
+        // 5. Factorial Calculator With Confirmation
+        // Goal: Ask the user for a number and calculate the factorial. Then ask if they want to try another number.
+
+        // ========= .forEach() =========
+
+        // 1. Print each number multiplied by 2
+
+        // let list = [1,2,3,4,5,6];
+        // let product;
+
+        // list.forEach((item) => {
+        //     product = item * 2;
+        //     console.log(product);
+        // });
+
+        // 2. Add all values in an array using .forEach()
+
+        // let list = [1,2,3,4,5,6];
+        // let sum = 0;
+
+        // list.forEach((item) => {
+        //     sum+=item;
+        // });
+        // console.log(sum);
+
+        // 3. Print only even numbers
+
+        // let list = [1,2,3,4,5,6];
+
+        // list.forEach((item)=>{
+        //     if(item%2===0)console.log(item);
+        // });
+
+        // 4. Create a new array of uppercase names
+
+        // let list = ["bob", "fred", "sally", "mary", "william"];
+        // let newList = [];
+
+        // list.forEach((item)=>{
+        //     newList.push(item.toUpperCase());
+        // });
+        // console.log(newList);
+
+        // 5. Count how many strings are longer than 4 characters
+
+        // let list = ["bob", "fred", "sally", "mary", "william"];
+
+        // list.forEach((item)=>{
+        //     if(item.length > 4) console.log(item);
+        // });
+
+        // ========= for of Loop =========
+
+        // 1. Sum All Numbers in an Array
+        // Write a program that sums all the numbers in an array using a for...of loop.
+
+        // let list = [1,2,3,4,5,6];
+        // let sum =0;
+
+        // for (item of list){
+        //     sum+=item;
+        // }
+        // alert(sum);
+
+        // 2. Count Vowels in a String
+        // Use a for...of loop to count how many vowels are in a given string.
+
+        // let word = "stallion";
+        // let count = 0;
+        // let vowels= "aeiou"
+        // for(letter of word){
+        //     if (vowels.includes(letter)) count+=1;
+        // }
+        // console.log(count);
+
+        // 3. Capitalize Each Word in an Array
+        // Use a for...of loop to capitalize the first letter of each word in an array.
+
+        // let list = ["bob", "fred", "sally", "mary", "william"];
+        // let i = 0;
+        // for(word of list){
+        //     list[i]= word[0].toUpperCase()+ word.slice(1);
+        //     i++;
+        // };
+        // console.log(list);
+
+        // 4. Filter Even Numbers
+        // Create a new array that only contains even numbers from the original array.
+
+        // 5. Print Each Character with Index
+        // Use a for...of loop and a manual counter to print each character of a string along with its index.
+
+        // ========= for in Loop =========
+
+        // 1. Print Object Keys and Values
+        // Objective: Practice looping through an object's properties and accessing both the keys and their corresponding values using a for...in loop.
+
+        // let person = {
+        //     age: 20,
+        //     name: "Billy",
+        //     height: "5'9",
+        // }
+
+        // for(let attr in person){
+        //     console.log(`${attr}: ${person[attr]}`);
+        // };
+
+        // 2. Count Properties in an Object
+        // Objective: Learn how to count the number of properties in an object by iterating through them with a for...in loop.
+
+        // let person = {
+        //     age: 20,
+        //     name: "Billy",
+        //     height: "5'9",
+        // };
+
+        // let count = 0;
+
+        // for (let attr in person) {
+        //     count += 1;
+        // }
+        // console.log(count);
+
+        // 3. Uppercase All String Values
+        // Objective: Use a for...in loop to identify which property values are strings, then modify them by converting to uppercase.
+
+        // let person = {
+        //     age: 20,
+        //     name: "Billy",
+        //     height: "5'9",
+        // };
+
+        // for (let attr in person) {
+        //     if (typeof person[attr] === "string") person[attr] = person[attr][0].toUpperCase() + person[attr].slice(1);
+        // }
+        // console.log(person);
+
+        // 4. Sum All Numeric Values
+        // Objective: Practice checking property value types and using a for...in loop to calculate the sum of all number values in an object.
+
+        // let person = {
+        //     age: 20,
+        //     favNum: 21,
+        //     name: "Billy",
+        //     height: "5'9",
+        // };
+
+        // let sum = 0;
+
+        // for (let attr in person) {
+        //     if (typeof person[attr] === "number") sum += person[attr];
+        // }
+        // console.log(sum);
+
+        // 5. Filter Only String Values
+        // Objective: Learn how to use a for...in loop to create a new object by selectively copying only properties with string values.
+
+        // let person = {
+        //     age: 20,
+        //     name: "Billy",
+        //     height: "5'9",
+        // };
+
+        // let newPerson = {};
+
+        // for (let attr in person) {
+        //     if (typeof person[attr] === "string") newPerson[attr] = person[attr];
+        // }
+        // console.log(newPerson);
+
+    </script>
+
+</body>
+
+</html>

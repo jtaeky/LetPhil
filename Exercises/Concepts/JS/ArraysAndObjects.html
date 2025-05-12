@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Methods</title>
+</head>
+
+<body>
+    <script>
+
+        // ========= push ========= Adds one or more elements to the end of an array. Returns the new length.
+
+        // 1. Add five numbers to an empty array using push().
+
+        // let list = [];
+
+        // for (let i = 0; i < 5; i++) {
+        //     list.push(Math.floor(Math.random() * 100) + 1);
+        // };
+        // console.log(list);
+
+        // 2. Add user input (prompt) to an array until the user types "stop".
+
+        // let list = [];
+        // console.log(typeof list);
+        // let inputTxt = prompt(`Type anything. When done, type "stop"`, "");
+
+        // while (inputTxt !== "stop") {
+        //     if (inputTxt.trim() === "") {
+        //         inputTxt = prompt(`Please Type in a Value`, "");
+        //     } else {
+        //         list.push(inputTxt);
+        //         inputTxt = prompt(`Type anything. When done, type "stop"`, "");
+        //     };
+        // }
+        // if (list.length === 0) {
+        //     alert("There's Nothing in the List!");
+        // } else {
+        //     alert(list);
+        // }
+
+        // 3. Start with an array of fruits, add two more using push(), then log it.
+
+        // let fruits = ["strawberry", "peach", "melon", "cantaloupe", "mangosteen"];
+        // let pushFruits = ["banana", "kiwii"];
+
+        // for (let i = 0; i < pushFruits.length; i++) fruits.push(pushFruits[i]);
+        // console.log(fruits);
+
+        // 4. Use a loop to push() squares of numbers (1² to 5²) into an array.
+
+        // let numList = [];
+
+        // for (let i = 1; i <= 5; i++) {
+        //     let square = (i) ** 2;
+        //     numList.push(square);
+        // }
+        // console.log(numList);
+
+        // 5. Combine two arrays by pushing elements from one into the other.
+
+        // let listOne = [1, 2, 3, 4];
+        // let listTwo = [5, 6, 7, 8, 9, 10];
+
+        // while (listTwo.length !== 0) {
+        //     listOne.push(listTwo[0]);
+        //     listTwo.shift();
+        // }
+        // console.log(listOne);
+
+        // ========= pop ========= Removes the last element from an array. Returns the removed element.
+
+        // 1. Remove the last item of an array and display it.
+
+        // let listTwo = [5, 6, 7, 8, 9, 10];
+
+        // let last = listTwo.pop();
+        // console.log(last);
+
+        // 2. Continuously pop elements until the array is empty.
+
+        // let listTwo = [5, 6, 7, 8, 9, 10];
+
+        // while (listTwo.length !== 0) {
+        //     listTwo.pop();
+        //     console.log(listTwo.slice());
+        // };
+
+        // 3. Pop the last task from a todoList array and alert it as "completed".
+
+        // let toDo = ["1. Laundry", "2. Exercise", "3. Work", "4. Eat"];
+
+        // let complete = toDo.pop();
+        // alert(`Task ${complete} has been completed`);
+
+        // 4. Pop elements from the end of a number array and sum them.
+
+        // let listTwo = [5, 6, 7, 8, 9, 10];
+        // let count = prompt("How many numbers should I add (1-6)", "");
+        // let sum = 0;
+
+        // function revSum() {
+        //     if (count !== null) {
+        //         while (count.trim() === "" || isNaN(count) || +count <= 0 || +count > 6) {
+        //             count = prompt("Please enter a valid number (1-6)", "")
+        //             if (count === null) {
+        //                 alert("Canceled");
+        //                 return;
+        //             };
+        //         };
+        //         for (let i = 0; i <= count - 1; i++) {
+        //             sum += listTwo.pop();
+        //         };
+        //         alert(`Sum of last ${count} value(s) is ${sum}`);
+        //         return;
+        //     }
+        //     alert("Canceled")
+        // };
+        // revSum();
+
+        // 5. Use a loop to pop and print each item in reverse order.
+
+        // let listTwo = [5, 6, 7, 8, 9, 10];
+        // let newList = [];
+        // let popNum;
+
+        // while (listTwo.length !== 0) {
+        //     popNum = listTwo.pop();
+        //     newList.push(popNum);
+        // };
+        // console.log(newList);
+
+        // ========= shift ========= Removes the first element from an array. Returns the removed element.
+
+        // 1. Remove the first element and log it.
+
+        // let listTwo = [5, 6, 7, 8, 9, 10];
+        // let shiftVal = listTwo.shift();
+        // console.log(shiftVal);
+
+        // 2. Use shift() in a loop to simulate a queue.
+
+        // let listTwo = [5, 6, 7, 8, 9, 10];
+        // let next;
+
+        // while (listTwo.length !== 0) {
+        //     next = listTwo.shift();
+        //     console.log(`Next up is ${next}`);
+        // };
+        // console.log("No more queue");
+
+        // 3. Keep removing elements from an array until it’s empty.
+
+        // let listTwo = [5, 6, 7, 8, 9, 10];
+        // let curNum;
+        // while (listTwo.length !== 0) {
+        //     curNum = listTwo.shift();
+        //     console.log(`Removed ${curNum}`);
+        //     console.log(listTwo);
+        // };
+
+        // 4. Remove the first name from a waiting list and log it as "Now serving: X".
+
+        // let listTwo = [5, 6, 7, 8, 9, 10];
+        // let curNum;
+        // while (listTwo.length !== 0) {
+        //     curNum = listTwo.shift();
+        //     console.log(`Now serving ${curNum}`);
+        // };
+
+        // 5. Combine shift() and a counter to track how many items were processed.
+
+        // let listTwo = [5, 6, 7, 8, 9, 10];
+        // let count = 0;
+        // let curNum;
+
+        // while (listTwo.length !== 0) {
+        //     curNum = listTwo.shift();
+        //     count++;
+        //     console.log(`${count}/6 items have been processed`);
+        // };
+
+        // ========= unshift ========= Adds one or more elements to the beginning of an array. Returns the new length.
+
+        // 1. Add elements to the beginning of an array using unshift().
+
+        // let list = ["monkey", "rhino", "panda", "dog"];
+        // let addList = ["lemur", "elephant", "mouse"];
+        // let addItem;
+
+        // while (addList.length !== 0) {
+        //     addItem = addList.shift();
+        //     list.push(addItem);
+        //     console.log(list);
+        // }
+
+        // 2. Add a timestamp to the front of a log list every second.
+
+        // let log = [];
+
+        // const startInt = setInterval(() => {
+        //     let now = new Date().toLocaleTimeString();
+        //     log.unshift(now);
+        //     console.log(log);
+        // }, 1000);
+
+        // setTimeout(() => {
+        //     clearInterval(startInt);
+        //     console.log("Done");
+        // }, 5000);
+
+        // 3. Use unshift() to reverse an array without reverse().
+
+        //Reversal without any methods
+
+        // let list = ["monkey", "rhino", "panda", "dog"];
+
+        // for (let i = 0; i < list.length / 2; i++) {
+        //     let temp = list[i];
+        //     list[i] = list[list.length - 1 - i];
+        //     list[list.length - 1 - i] = temp;
+        // }
+        // console.log(list);
+
+        // let list = ["monkey", "rhino", "panda", "dog"];
+        // let len = list.length;
+
+        // // Step 1: use unshift to append reversed values to front
+        // for (let i = len - 1; i >= 0; i--) {
+        //     list.push(list[i]); // put copy at the end
+        // }
+
+        // // Step 2: unshift from end of extended list
+        // for (let i = 0; i < len; i++) {
+        //     list.unshift(list.pop()); // move from end to front
+        // }
+
+        // // Step 3: clean up the extra elements at the back
+        // list.length = len;
+
+        // console.log(list);
+
+        // 4. Add new users to the front of a userQueue array.
+
+        // let newUser = prompt("Name of New User (Press Cancel to View List)", "");
+        // let users = [];
+
+        // while (newUser !== null) {
+        //     if (newUser.trim() !== "") {
+        //         users.unshift(`${newUser}: joined ${new Date().toLocaleTimeString()}`);
+        //         newUser = prompt("Name of New User (Press Cancel to View List)", "");
+        //     } else {
+        //         newUser = prompt("Please Enter a Value", "");
+        //     }
+        // };
+        // alert(users);
+
+        // 5. Use unshift() in a loop to prepend values 1 to 5 to an array.
+
+        // let list = [];
+
+        // for (let i = 5; i > 0; i--) {
+        //     list.unshift(i);
+        // };
+        // alert(list);
+
+        // ========= splice ========= Allows you to add, remove, or replace elements in an array.
+        // Example: array.splice(startIndex, deleteCount, item1, item2, ...)
+
+        // 1. Remove the second element from the array
+        // let fruits = ["apple", "banana", "cherry", "date"];
+
+        // let fruits = ["apple", "banana", "cherry", "date"];
+        // fruits.splice(1,1);
+        // console.log(fruits);
+
+        // 2. Insert "kiwi" and "mango" between "banana" and "cherry"
+        // let fruits = ["apple", "banana", "cherry", "date"];
+
+        // let fruits = ["apple", "banana", "cherry", "date"];
+        // fruits.splice(2,0,"kiwi","mango");
+        // console.log(fruits);
+
+        // 3. Replace "banana" and "cherry" with "blueberry"
+        // let fruits = ["apple", "banana", "cherry", "date"];
+
+        // let fruits = ["apple", "banana", "cherry", "date"];
+        // fruits.splice(1,2,"blueberry");
+        // console.log(fruits);
+
+        // 4. Remove the last two elements
+        // let nums = [1, 2, 3, 4, 5];
+
+        // let nums = [1, 2, 3, 4, 5]
+        // nums.splice(3,2);
+        // console.log(nums);
+
+        // 5. Clear the entire array using splice
+        // let nums = [1, 2, 3, 4];
+
+        // let nums = [1, 2, 3, 4];
+        // nums.splice(0,4);
+        // console.log(nums);
+
+        // ========= filter ========= Returns a new array that includes only the elements from the original array that pass a test condition.
+
+        // 1. Keep only even numbers
+        // let nums = [1, 2, 3, 4, 5, 6];
+        // // 👉 Expected result: [2, 4, 6]
+
+        // let nums = [1, 2, 3, 4, 5, 6];
+        // let newNums = nums.filter(evenNum => evenNum % 2 === 0);
+        // console.log(newNums);
+
+        // 2. Keep only strings longer than 3 letters
+        // let words = ["hi", "bear", "cat", "elephant", "dog"];
+        // // 👉 Expected result: ["bear", "elephant"]
+
+        // let words = ["hi", "bear", "cat", "elephant", "dog"];
+        // let longWords = words.filter(longWord => longWord.length > 3);
+        // console.log(longWords);
+
+        // 3. Filter out numbers less than 10
+        // let values = [5, 12, 8, 20, 1];
+        // // 👉 Expected result: [12, 20]
+
+        // let values = [5, 12, 8, 20, 1];
+        // let lessThan = values.filter(lessThan => lessThan < 10);
+        // console.log(lessThan);
+
+        // 4. Keep only names starting with the letter "J"
+        // let names = ["John", "Alice", "Jack", "Bob", "Jill"];
+        // // 👉 Expected result: ["John", "Jack", "Jill"]
+
+        // let names = ["John", "Alice", "Jack", "Bob", "Jill"];
+        // let jNames = names.filter(jName => jName[0].toLowerCase() === "j");
+        // console.log(jNames);
+
+        // 5. Filter out falsy values
+        // let mixed = [0, "hello", false, 42, "", null, "world"];
+        // // 👉 Expected result: ["hello", 42, "world"]
+
+        // let mixed = [0, "hello", false, 42, "", null, "world"];
+        // let trueMix = mixed.filter(trueMix => trueMix);
+        // console.log(trueMix);
+
+        // ========= map ========= Creates a new array by applying a function to each element of the original array.
+
+        // 1. Square each number
+        // let nums = [1, 2, 3, 4];
+        // // 👉 Expected result: [1, 4, 9, 16]
+
+        // let nums = [1, 2, 3, 4];
+        // let squared = nums.map(square => square * square);
+        // console.log(squared);
+
+        // 2. Capitalize the first letter of each word
+        // let words = ["cat", "dog", "elephant"];
+        // // 👉 Expected result: ["Cat", "Dog", "Elephant"]
+
+        // let words = ["cat", "dog", "elephant"];
+        // let capWords = words.map(caps => caps[0].toUpperCase() + caps.slice(1));
+        // console.log(capWords);
+
+        // 3. Turn numbers into strings with "$" sign
+        // let prices = [5, 10, 15];
+        // // 👉 Expected result: ["$5", "$10", "$15"]
+
+        // let prices = [5, 10, 15];
+        // let dollaSign = prices.map(sign => `$${sign}`);
+        // console.log(dollaSign);
+
+        // 4. Return the length of each string
+        // let animals = ["lion", "tiger", "bear"];
+        // // 👉 Expected result: [4, 5, 4]
+
+        // let animals = ["lion", "tiger", "bear"];
+        // let wordLen = animals.map(count => count.length);
+        // console.log(wordLen);
+
+        // 5. Add 1 to each number and return as new array
+        // let nums = [10, 20, 30];
+        // // 👉 Expected result: [11, 21, 31]
+
+        // let nums = [10, 20, 30];
+        // let newNums = nums.map(newNum => newNum + 1);
+        // console.log(newNums);
+
+        // ========= objects =========
+
+        // 1. Create an object to store a person's name, age, and city. Then log each property to the console.
+        // // 👉 Expected structure:
+        // // { name: "Alice", age: 30, city: "New York" }
+        // // 👉 Expected output:
+        // // Alice
+        // // 30
+        // // New York
+
+        // function Person(name, age, city) {
+        //     this.Name = name;
+        //     this.Age = age;
+        //     this.City = city;
+        // };
+
+        // let person = new Person("Billy", 16, "Baltimore");
+        // for (i in person) {
+        //     console.log(`${i}: ${person[i]}`);
+        // };
+
+        // 2. Add a new property email to the object and assign it a value.
+        // let user = { name: "Tom", age: 25 };
+        // // 👉 Add: email = "tom@example.com"
+        // // 👉 Expected: { name: "Tom", age: 25, email: "tom@example.com" }
+
+        // function Person(name, age, city, email) {
+        //     this.Name = name;
+        //     this.Age = age;
+        //     this.City = city;
+        //     this.Email = email;
+        // };
+
+        // let person = new Person("Billy", 16, "Baltimore", "billyboy@email.com");
+        // for (i in person) {
+        //     console.log(`${i}: ${person[i]}`);
+        // };
+
+        // 3. Change the value of an existing property
+        // let car = { brand: "Toyota", year: 2010 };
+        // // 👉 Update year to 2022
+        // // 👉 Expected: { brand: "Toyota", year: 2022 }
+
+        // let car = { brand: "Toyota", year: 2010 };
+        // car.year = 2022;
+        // console.log(car);
+
+        // 4. Delete a property from an object
+        // let book = { title: "1984", author: "George Orwell", pages: 328 };
+        // // 👉 Remove the pages property
+        // // 👉 Expected: { title: "1984", author: "George Orwell" }
+
+        // let book = { title: "1984", author: "George Orwell", pages: 328 };
+        // delete book.pages;
+        // console.log(book);
+
+        // 5. Loop through the properties of an object and log each key and value
+        // let student = { name: "Eva", grade: "A", age: 19 };
+        // // 👉 Use a for...in loop to log:
+        // // name: Eva
+        // // grade: A
+        // // age: 19
+
+        // let student = { name: "Eva", grade: "A", age: 19 };
+        // for (i in student) {
+        //     console.log(`${i}: ${student[i]}`);
+        // };
+
+        // ========= looping through objects using for...in =========
+
+        // 1. Log all keys in the object
+        // let dog = {
+        //     breed: "Labrador",
+        //     age: 4,
+        //     color: "black"
+        // };
+        // // 👉 Expected output:
+        // // breed
+        // // age
+        // // color
+
+        // let dog = {
+        //     breed: "Labrador",
+        //     age: 4,
+        //     color: "black"
+        // };
+
+        // for (i in dog) {
+        //     console.log(i);
+        // }
+
+        // 2. Log all values in the object
+        // let fruit = {
+        //     name: "Mango",
+        //     color: "Yellow",
+        //     taste: "Sweet"
+        // };
+        // // 👉 Expected output:
+        // // Mango
+        // // Yellow
+        // // Sweet
+
+        // let fruit = {
+        //     name: "Mango",
+        //     color: "Yellow",
+        //     taste: "Sweet"
+        // };
+
+        // for (i in fruit) {
+        //     console.log(fruit[i]);
+        // };
+
+        // 3. Log each key and value in the format "key: value"
+        // let user = {
+        //     username: "coder123",
+        //     level: 7,
+        //     points: 1500
+        // };
+        // // 👉 Expected output:
+        // // username: coder123
+        // // level: 7
+        // // points: 1500
+
+        // let user = {
+        //     username: "coder123",
+        //     level: 7,
+        //     points: 1500
+        // };
+
+        // for (i in user) {
+        //     console.log(`${i}: ${user[i]}`);
+        // };
+
+        // 4. Count how many string-type properties the object has
+        // let product = {
+        //     name: "Phone",
+        //     price: 799,
+        //     brand: "TechCorp",
+        //     inStock: true
+        // };
+        // // 👉 Expected result: 2 (because "name" and "brand" are strings)
+
+        // let product = {
+        //     name: "Phone",
+        //     price: 799,
+        //     brand: "TechCorp",
+        //     inStock: true
+        // };
+
+        // let count = 0;
+
+        // for (i in product) {
+        //     if (typeof product[i] === "string") count++;
+        // };
+        // console.log(count);
+
+        // 5. Copy only string values to a new object
+        // let original = {
+        //     id: 101,
+        //     name: "Camera",
+        //     description: "Takes high-quality photos",
+        //     weight: 1.5,
+        //     available: true
+        // };
+        // // 👉 Expected new object:
+        // // { name: "Camera", description: "Takes high-quality photos" }
+
+        // let original = {
+        //     id: 101,
+        //     name: "Camera",
+        //     description: "Takes high-quality photos",
+        //     weight: 1.5,
+        //     available: true
+        // };
+
+        // let newObj = {};
+
+        // for (i in original) {
+        //     if (typeof original[i] === "string") {
+        //         newObj[i] = original[i];
+        //     };
+        // };
+
+        // console.log(newObj);
+
+    </script>
+</body>
+
+</html>
